@@ -30,10 +30,17 @@
   </head>
 
   <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
     <!-- =========================
      Welcome / Splash Screen
 ========================== -->
     <div class="welcome-screen" id="welcomeScreen">
+      <div class="welcome-glow" aria-hidden="true"></div>
       <img src="images/welcome.jpg" alt="L'DORA" class="welcome-image" />
 
       <p class="designer">
@@ -50,13 +57,15 @@
      Main Page
 ========================== -->
     <main class="page" id="mainContent">
+      <div class="page-aurora" aria-hidden="true"></div>
+
       <!-- Header -->
       <header class="header">
         <div class="logo">L'<span>DORA</span></div>
       </header>
 
       <!-- Hero -->
-      <section class="hero">
+      <section class="hero reveal">
         <!-- <div class="hero-image">
           <iframe
             src="https://DigiPostal.ir/cafq82i"
@@ -66,53 +75,88 @@
           ></iframe>
         </div> -->
 
-        <div class="hero-image">
-          <div class="hero-item">
-            <img src="images/hero1.jpg" alt="L'DORA" />
-            <p>مریم عابدینی</p>
+        <div class="hero-stage">
+          <div class="hero-image hero-bento">
+            <div class="hero-item hero-item--lead">
+              <div class="hero-frame">
+                <img src="images/hero1.jpg" alt="L'DORA" />
+              </div>
+              <p>مریم عابدینی</p>
+            </div>
+            <div class="hero-item">
+              <div class="hero-frame">
+                <img src="images/hero2.jpg" alt="L'DORA" />
+              </div>
+              <p>نیوشا حاجیوند</p>
+            </div>
+            <div class="hero-item">
+              <div class="hero-frame">
+                <img src="images/hero3.jpg" alt="L'DORA" />
+              </div>
+              <p>سارا فداکار</p>
+            </div>
+            <div class="hero-item hero-item--wide">
+              <div class="hero-frame">
+                <img src="images/hero4.jpg" alt="L'DORA" />
+              </div>
+              <p>سهیلا بقایی منش</p>
+            </div>
           </div>
-          <div class="hero-item">
-            <img src="images/hero2.jpg" alt="L'DORA" />
-            <p>نیوشا حاجیوند</p>
+          <div class="hero-badge" aria-hidden="true">
+            <i class="fa-solid fa-star"></i>
+            NEW
           </div>
-          <div class="hero-item">
-            <img src="images/hero3.jpg" alt="L'DORA" />
-            <p>سارا فداکار</p>
-          </div>
-          <div class="hero-item">
-            <img src="images/hero4.jpg" alt="L'DORA" />
-            <p>سهیلا بقایی منش</p>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>L'DORA BEAUTY</span>
+            <span>✦</span>
+            <span>QUALITY & CARE</span>
+            <span>✦</span>
+            <span>IRAN MALL</span>
+            <span>✦</span>
+            <span>L'DORA BEAUTY</span>
+            <span>✦</span>
+            <span>QUALITY & CARE</span>
+            <span>✦</span>
+            <span>IRAN MALL</span>
+            <span>✦</span>
           </div>
         </div>
 
         <div class="eyebrow">L'DORA BEAUTY</div>
 
         <h1>
-          زیبایی، با انتخابی هوشمندانه
-          <i style="transform: scaleX(-1)" class="fa-solid fa-turn-down"></i>
+          <span class="text-gradient">زیبایی</span>، با انتخابی هوشمندانه
+          <i class="fa-solid fa-turn-down hero-title-icon" aria-hidden="true"></i>
         </h1>
-        <p>
+        <p class="hero-lead">
           محصولات زیبایی و مراقبت L'DORA، ترکیبی از کیفیت، زیبایی و مراقبت برای
           استفاده روزمره شما.
         </p>
 
-        <a style="width: 80%" href="#location" class="button">
-          مشاهده زمان و مکان برگزاری
-        </a>
-        <a style="width: 80%" href="#products" class="button">
-          مشاهده محصولات
-        </a>
+        <div class="hero-actions">
+          <a href="#location" class="button button-secondary">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            زمان و مکان برگزاری
+          </a>
+          <a href="#products" class="button button-shimmer">
+            <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+            مشاهده محصولات
+          </a>
+        </div>
       </section>
 
       <!-- Features -->
-      <section class="section">
+      <section class="section reveal">
         <div class="section-title">
           <small>WHY L'DORA</small>
-          <h2>چرا L'DORA؟</h2>
+          <h2>چرا <span class="text-gradient">L'DORA</span>؟</h2>
         </div>
 
         <div class="features">
-          <div class="feature">
+          <div class="feature reveal reveal-delay-1">
             <div class="feature-icon">✨</div>
 
             <h3>کیفیت بالا</h3>
@@ -120,7 +164,7 @@
             <p>انتخاب شده برای تجربه‌ای بهتر در مراقبت و زیبایی.</p>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal reveal-delay-2">
             <div class="feature-icon">🌿</div>
 
             <h3>مراقبت روزانه</h3>
@@ -128,7 +172,7 @@
             <p>مناسب برای استفاده روزمره و روتین زیبایی شما.</p>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal reveal-delay-3">
             <div class="feature-icon">💎</div>
 
             <h3>حس متفاوت</h3>
@@ -136,7 +180,7 @@
             <p>طراحی و تجربه‌ای متناسب با سبک زندگی مدرن.</p>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal reveal-delay-4">
             <div class="feature-icon">❤️</div>
 
             <h3>انتخاب مطمئن</h3>
@@ -147,14 +191,14 @@
       </section>
 
       <!-- Products -->
-      <section class="section" id="products">
-        <div class="section-title">
+      <section class="section section--dark reveal" id="products">
+        <div class="section-title section-title--light">
           <small>OUR PRODUCTS</small>
           <h2>محصولات L'DORA</h2>
         </div>
 
         <div class="products">
-          <article class="product">
+          <article class="product product--showcase reveal">
             <div class="product-image">
               <img src="images/product-1.jpg" alt="محصول L'DORA" />
             </div>
@@ -173,7 +217,7 @@
             </div>
           </article>
 
-          <article class="product">
+          <article class="product product--showcase reveal">
             <div class="product-image">
               <img src="images/product-2.jpg" alt="محصول L'DORA" />
             </div>
@@ -194,7 +238,7 @@
             </div>
           </article>
 
-          <article class="product">
+          <article class="product product--showcase reveal">
             <div class="product-image">
               <img src="images/product-3.jpg" alt="محصول L'DORA" />
             </div>
@@ -216,7 +260,7 @@
       </section>
 
       <!-- Promotion -->
-      <section class="promotion">
+      <section class="promotion reveal">
         <small> پیشنهاد ویژه L'DORA </small>
 
         <h2>
@@ -228,7 +272,9 @@
         <p>محصولات L'DORA را ببین و محصول مناسب خودت را پیدا کن.</p>
 
         <!-- <a href="#products" class="button"> مشاهده پیشنهاد ویژه </a> -->
-        <a class="button" href="files/catalog.pdf" download> دانلود بروشور </a>
+        <a class="button button-shimmer" href="files/catalog.pdf" download>
+          دانلود بروشور
+        </a>
       </section>
 
       <!-- About -->
@@ -308,13 +354,11 @@
             <i class="fa-solid fa-location-dot"></i>
             لوکیشن: ایرانمال، غرفه E115
           </a>
-          <div style="width: 100%; border-radius: 30px; overflow: hidden">
-            <!-- src="https://maps.google.com/maps?q=35.756063846757264,51.19466981556097&z=17&output=embed" -->
+          <div class="map-embed">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3237.852944015241!2d51.19147375924682!3d35.75441907658308!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e07a9d5022b99%3A0x4267a58419aadb4a!2sIran%20Mall!5e0!3m2!1sen!2sus!4v1791654042474!5m2!1sen!2sus"
               width="100%"
               height="350"
-              style="border: 0; display: block"
               allowfullscreen
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -338,19 +382,51 @@
     <script>
       window.addEventListener("load", function () {
         const welcomeScreen = document.getElementById("welcomeScreen");
-
-        // How long the welcome screen stays visible
         const displayTime = 3000;
 
         setTimeout(function () {
           welcomeScreen.classList.add("hide");
+          document.body.classList.add("page-ready");
 
-          // Completely remove it after the animation
           setTimeout(function () {
             welcomeScreen.remove();
           }, 800);
         }, displayTime);
       });
+
+      const revealItems = document.querySelectorAll(".reveal");
+
+      function showRevealsInView() {
+        revealItems.forEach(function (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.92) {
+            el.classList.add("is-visible");
+          }
+        });
+      }
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.08, rootMargin: "0px 0px -5% 0px" },
+        );
+        revealItems.forEach(function (el) {
+          observer.observe(el);
+        });
+        showRevealsInView();
+        setTimeout(showRevealsInView, 900);
+      } else {
+        revealItems.forEach(function (el) {
+          el.classList.add("is-visible");
+        });
+      }
     </script>
   </body>
 </html>
